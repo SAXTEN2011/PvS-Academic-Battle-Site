@@ -6,8 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap 101 Template</title>
 
+
+
+
+
+
     <!-- Bootstrap -->
     <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="javascripts/bootstrap.min.js"></script>
+
+
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -17,83 +29,73 @@
     <![endif]-->
   </head>
   <body>
-    <nav class="navbar navbar-default navbar-static-top container-fluid" role="navigation">
-  <div class="container-fluid">
+    <div class="impressiveText text-center">
+<h1 class="h1 text-center"><strong class="imp">A Battle Of The Brains</strong></h1>
+<h4><red>Parents </red> Vs <green>Students</green></h4>
+<button type="button" class="btn btn-default btn-lg btn-primary">Begin</button>
+</div>
 
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="index.html">Home</a></li>
-        <li><a href="forms.html">Sign Up</a></li>
-        <li><a href="components.html">Insert Something Here</a></li>
-      </ul>
+<script type="text/javascript">
+var winHei = $(window).height();
+var workingArea = (winHei/2)-$(".impressiveText").height();
+var workingWidth = $(".imp").width()+300;
+$(".impressiveText").css("margin-top",workingArea)
 
-  </div>
-</nav>
-<div class="ca">
-
-
-
-
-    <h1 class="text-primary">Ah, so you followed the code?</h1>
-    <p class="lead text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-    <table class="table table-bordered table-striped">
-    <tr>
-      <td>First Name</td>
-      <td>Last Name</td>
-      <td>Act</td>
-    </tr>
-    <tr>
-      <td>Aaron</td>
-      <td>Pierce</td>
-      <td>Singing, like everyone else....</td>
+$("btn").css("width",workingWidth)
 
 
-    </tr>
-    <tr>
-      <td>Matthew</td>
-      <td>McCoy</td>
-      <td>Educating</td>
 
-    </table>
-  </div>
-<!--  <div class="container">
-    <form role="form">
-      <div class="form-group">
-      <input type="email" class="form-control">
-      <br><br>
-      </div>
-      <div class="form-group">
-      <input type="password" class="form-control">
-      <br><br>
-    </div>
-    <div class="form-group checkbox">
-      <input type="checkbox"> Keep me logged in
-      <br><br>
-    </div>
-    <div class="form-group">
-      <button type="submit" class="btn but-default">Submit</button>
-      <br><br>
-    </div>
-  </div>
-    </form>
--->
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="javascripts/bootstrap.min.js"></script>
+
+</script>
+
+
+
   </body>
-  <style type="text/css"> 
-    .form-container {
-        width: 500px;
-        margin: 0 auto;
-    }
-    .ca{
-      padding: 10px;
-    }
-</style>
+  <style type="text/css">
+body{
+  background-color: #333;
+  color: white;
+}
+nav{
+  background-color: #333;
+}
+.myHeader{
+  background-color: #333;
+  border: none;
+}
+*{
+  color: white;
+}
+a{
+  color: white;
+}
+.impressiveText{
+font-size: 2em;
+}
+red{
+  color: #FF0000;
+}
+blue{
+  color: #0000FF;
+}
+green{
+  color: lime;
+}
+.h1{
+  color: #337ab7;
+}
+strong{
+  color: #337ab7;
+  font-size: 2em;
+}
+h1{
+  font-size: 2em;
+}
+h4{
+  font-size: 2em;
+}
+.btn-lg{
+  width: 13em;
+}
+  </style>
 </html>
