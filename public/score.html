@@ -1,0 +1,130 @@
+<html>
+<head>
+    <title>The Battle of The Brains</title>
+
+        <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="javascripts/bootstrap.min.js"></script>
+
+
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="text-center">
+<span class="glyphicon glyphicon-plus studentAdd" aria-hidden="true"> </span>
+<p><span class="invis">_______</span><green> <span class="studentScore"> 0</span> </green><span class="invis">_______</span></p>
+<span class="glyphicon glyphicon-minus studentSubstract" aria-hidden="true"> </span>
+<br><br><br><br><br><br>
+<span class="glyphicon glyphicon-arrow-up"> </span>
+<span class="glyphicon glyphicon-arrow-up"> </span>
+<span class="glyphicon glyphicon-arrow-up"> </span>
+<br>
+<p><green>Students</green></p>
+<br><br>
+<p><red>Parents</red></p>
+<br>
+<span class="glyphicon glyphicon-arrow-down"> </span>
+<span class="glyphicon glyphicon-arrow-down"> </span>
+<span class="glyphicon glyphicon-arrow-down"> </span>
+<br><br><br><br><br>
+<div class="parentscore">
+<span class="glyphicon glyphicon-plus parentAdd" aria-hidden="true"> </span>
+
+<p><span class="invis">_______</span><red> <span class="parent1Score"> 0</span> </red><span class="invis">_______</span></p>
+<span class="glyphicon glyphicon-minus parentSubstract" aria-hidden="true"> </span>
+</div>
+
+
+
+</body>
+<style type="text/css">
+body{
+    background-color: #333;
+}
+.glyphicon-plus{
+    font-size: 60px;
+    color: lime;
+}
+.glyphicon-minus{
+    font-size: 60px;
+    color: red;
+}
+.glyphicon:hover{
+    cursor: pointer;
+}
+p{
+    color: white;
+    display: inline-block;
+    font-size: 5em;
+}
+.invis{
+    opacity: 0;
+}
+green{
+    color: lime;
+}
+red{
+    color: red;
+}
+.glyphicon-arrow-up{
+    color: #337ab7;
+    font-size: 2em;
+    cursor: default;
+}
+.glyphicon-arrow-down{
+    color: #337ab7;
+    font-size: 2em;
+    cursor: default;
+}
+</style>
+<script type="text/javascript">
+var winHei = $(window).height();
+var workingHei = winHei - $(".parentscore").height()*6;
+var workingHeight = workingHei - $(".parentscore").height();
+$(".parentscore").css("margin-top",workingHeight)
+</script>
+<script type="text/javascript">
+var adultScore = 0;
+var kidscore = 0;
+
+$(".studentAdd").click(function(){
+kidscore++;
+$(".studentScore").html(kidscore);
+
+
+});
+
+$(".studentSubstract").click(function(){
+kidscore--;
+$(".studentScore").html(kidscore);
+
+
+});
+
+
+$(".parentSubstract").click(function(){
+adultScore--;
+$(".parent1Score").html(adultScore);
+
+
+});
+$(".parentAdd").click(function(){
+adultScore++;
+$(".parent1Score").html(adultScore);
+
+
+});
+</script>
+</html>
