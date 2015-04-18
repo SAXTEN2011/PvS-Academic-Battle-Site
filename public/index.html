@@ -28,11 +28,11 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body class='body'>
     <div class="impressiveText text-center">
 <h1 class="h1 text-center"><strong class="imp">A Battle Of The Brains</strong></h1>
-<h4><red>Parents </red> Vs <green>Students</green></h4>
-<button type="button" class="btn btn-default btn-lg btn-primary">Begin</button>
+<h4><red>Parents </red> <white>Vs</white> <green><bolded>Students</bolded></green></h4>
+<button href="#" type="button" class="btn btn-default btn-lg btn-primary" >Begin</button>
 </div>
 
 <script type="text/javascript">
@@ -43,9 +43,29 @@ $(".impressiveText").css("margin-top",workingArea)
 
 $("btn").css("width",workingWidth)
 
+$(".btn").fadeIn("slow");
+$(document).ready(function(){
+  $(".h1").fadeIn(2000,function(){
+    $("red").fadeIn(1000,function(){
+      $("white").fadeIn(1000,function(){
+        $("green").fadeIn(1000,function(){
+           $(".btn").fadeIn(3000,function(){
 
 
+  });
 
+  });
+
+  });
+
+  });
+});
+});
+$(".btn").click(function(){
+window.location.assign("score.html")
+
+
+});
 </script>
 
 
@@ -74,15 +94,21 @@ font-size: 2em;
 }
 red{
   color: #FF0000;
+    display: none;
 }
 blue{
   color: #0000FF;
 }
 green{
   color: lime;
+    display: none;
+}
+white{
+  display: none;
 }
 .h1{
   color: #337ab7;
+  display: none;
 }
 strong{
   color: #337ab7;
@@ -93,9 +119,17 @@ h1{
 }
 h4{
   font-size: 2em;
+
 }
 .btn-lg{
   width: 13em;
+}
+.btn{
+  display: none;
+}
+bolded{
+  font-weight: bold;
+  color: lime;
 }
   </style>
 </html>
