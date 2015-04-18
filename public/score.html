@@ -31,9 +31,9 @@
 <span class="glyphicon glyphicon-arrow-up"> </span>
 <span class="glyphicon glyphicon-arrow-up"> </span>
 <br>
-<p><green>Students</green></p>
+<p class="studentWin"><green>Students</green></p>
 <br><br>
-<p><red>Parents</red></p>
+<p class="parentWin"><red>Parents</red></p>
 <br>
 <span class="glyphicon glyphicon-arrow-down"> </span>
 <span class="glyphicon glyphicon-arrow-down"> </span>
@@ -88,6 +88,12 @@ red{
     font-size: 2em;
     cursor: default;
 }
+.studentWin{
+    cursor: pointer;
+}
+.parentWin{
+    cursor: pointer;
+}
 </style>
 <script type="text/javascript">
 var winHei = $(window).height();
@@ -125,6 +131,31 @@ adultScore++;
 $(".parent1Score").html(adultScore);
 
 
+});
+
+$(".parentWin").click(function(){
+var res = confirm("Are you sure you want to declare the parents the winner?")
+if(res==true){
+    $("body").html("<h1 style='color:red'><red>THE PARENTS HAVE WON!</red></h1>")
+    $("body").css("background-color","#333")
+    $("body").css("vertical-align","middle")
+
+}else{
+
+}
+});
+
+
+$(".studentWin").click(function(){
+var res = confirm("Are you sure you want to declare the students the winner?")
+if(res==true){
+    $("body").html("<h1 style='color:lime'><red>THE STUDENTS HAVE WON!</red></h1>")
+    $("body").css("background-color","#333")
+    $("body").css("vertical-align","middle")
+
+}else{
+    
+}
 });
 </script>
 </html>
