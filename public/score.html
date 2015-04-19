@@ -94,6 +94,12 @@ red{
 .parentWin{
     cursor: pointer;
 }
+.text-green{
+    color:lime;
+}
+.text-red{
+    color: red;
+}
 </style>
 <script type="text/javascript">
 var winHei = $(window).height();
@@ -108,54 +114,44 @@ var kidscore = 0;
 $(".studentAdd").click(function(){
 kidscore++;
 $(".studentScore").html(kidscore);
-
-
+checkScore();
 });
-
-$(".studentSubstract").click(function(){
+    $(".studentSubstract").click(function(){
 kidscore--;
 $(".studentScore").html(kidscore);
-
-
+checkScore();
 });
 
-
-$(".parentSubstract").click(function(){
-adultScore--;
-$(".parent1Score").html(adultScore);
-
-
-});
 $(".parentAdd").click(function(){
 adultScore++;
 $(".parent1Score").html(adultScore);
-
-
+checkScore();
+});
+    $(".parentSubstract").click(function(){
+adultScore--;
+$(".parent1Score").html(adultScore);
+checkScore();
 });
 
-$(".parentWin").click(function(){
-var res = confirm("Are you sure you want to declare the parents the winner?")
-if(res==true){
-    $("body").html("<h1 style='color:red'><red>THE PARENTS HAVE WON!</red></h1>")
-    $("body").css("background-color","#333")
-    $("body").css("vertical-align","middle")
+function checkScore(){
+if(kidscore==adultScore){
+    $(".studentScore").css("color","yellow");
+    $(".parent1Score").css("color","yellow");
+}else if(kidscore>adultScore){
+    $(".studentScore").css("color","lime");
+    $(".parent1Score").css("color","red");
+}else if(kidscore<adultScore){
+    $(".studentScore").css("color","red");
+    $(".parent1Score").css("color","lime");
+}
 
-}else{
+
 
 }
-});
-
-
-$(".studentWin").click(function(){
-var res = confirm("Are you sure you want to declare the students the winner?")
-if(res==true){
-    $("body").html("<h1 style='color:lime'><red>THE STUDENTS HAVE WON!</red></h1>")
-    $("body").css("background-color","#333")
-    $("body").css("vertical-align","middle")
-
-}else{
-    
-}
-});
+$(".studentScore").css("color","yellow");
+    $(".parent1Score").css("color","yellow");
 </script>
+
+
+
 </html>
