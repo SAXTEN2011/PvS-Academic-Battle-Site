@@ -23,23 +23,30 @@
     <![endif]-->
 </head>
 <body class="text-center">
+    <div class="notpscore">
+        <div class="ducttapefixes">
 <span class="glyphicon glyphicon-plus studentAdd" aria-hidden="true"> </span>
 <p><span class="invis">_______</span><green> <span class="studentScore"> 0</span> </green><span class="invis">_______</span></p>
 <span class="glyphicon glyphicon-minus studentSubstract" aria-hidden="true"> </span>
-<br><br><br><br><br><br>
+<br>
 <span class="glyphicon glyphicon-arrow-up"> </span>
 <span class="glyphicon glyphicon-arrow-up"> </span>
 <span class="glyphicon glyphicon-arrow-up"> </span>
 <br>
 <p class="studentWin"><green>Students</green></p>
-<br><br>z
+<br><br>
+</div>
+</div>
+<div class="pdec">
 <p class="parentWin"><red>Parents</red></p>
 <br>
 <span class="glyphicon glyphicon-arrow-down"> </span>
 <span class="glyphicon glyphicon-arrow-down"> </span>
 <span class="glyphicon glyphicon-arrow-down"> </span>
-<br><br><br><br><br>
+
+</div>
 <div class="parentscore">
+    <br>
 <span class="glyphicon glyphicon-plus parentAdd" aria-hidden="true"> </span>
 
 <p><span class="invis">_______</span><red> <span class="parent1Score"> 0</span> </red><span class="invis">_______</span></p>
@@ -152,6 +159,15 @@ $(".studentScore").css("color","yellow");
     $(".parent1Score").css("color","yellow");
 </script>
 
-
+<script type="text/javascript">
+var whei = $(window).height();
+var pshi = $(".parentscore").height();
+var npsh = $(".notpscore").height();
+var pdech = $(".pdec").height()
+var pos = (whei - pshi);
+var pos2 = whei - npsh - pshi - pdech;
+$(".parentscore").css("margin-top",1);
+$(".pdec").css("margin-top",pos2);
+</script>
 
 </html>
