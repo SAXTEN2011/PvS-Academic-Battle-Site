@@ -33,12 +33,12 @@
 <span class="glyphicon glyphicon-arrow-up"> </span>
 <span class="glyphicon glyphicon-arrow-up"> </span>
 <br>
-<p class="studentWin"><green>Students</green></p>
+<p class="studentWin"><green class="studentWin">Students</green></p>
 <br><br>
 </div>
 </div>
 <div class="pdec">
-<p class="parentWin"><red>Parents</red></p>
+<p class="parentWin"><red class="parentWin">Parents</red></p>
 <br>
 <span class="glyphicon glyphicon-arrow-down"> </span>
 <span class="glyphicon glyphicon-arrow-down"> </span>
@@ -139,21 +139,23 @@ adultScore--;
 $(".parent1Score").html(adultScore);
 checkScore();
 });
-
 function checkScore(){
 if(kidscore==adultScore){
-    $(".studentScore").css("color","yellow");
-    $(".parent1Score").css("color","yellow");
+$(".studentScore").css("color","yellow");
+$(".parent1Score").css("color","yellow");
+$(".studentWin").css("color","yellow");
+$(".parentWin").css("color","yellow");
 }else if(kidscore>adultScore){
-    $(".studentScore").css("color","lime");
-    $(".parent1Score").css("color","red");
+$(".studentScore").css("color","lime");
+$(".parent1Score").css("color","red");
+$(".studentWin").css("color","lime");
+$(".parentWin").css("color","red");
 }else if(kidscore<adultScore){
-    $(".studentScore").css("color","red");
-    $(".parent1Score").css("color","lime");
+$(".studentScore").css("color","red");
+$(".parent1Score").css("color","lime");
+$(".studentWin").css("color","red");
+$(".parentWin").css("color","lime");
 }
-
-
-
 }
 $(".studentScore").css("color","yellow");
     $(".parent1Score").css("color","yellow");
